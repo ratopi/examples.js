@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>TEST</title>
+
+	<script type="text/javascript">
+
+		function sum( array )
+		{
+			var sum = 0;
+
+			var key;
+			for ( key in array )
+			{
+				sum += array[ key ];
+			}
+
+			return sum;
+		}
+
+		document.writeln( "The result is " + sum( [ 1, 2, 3 ] ) );
+
+	</script>
+
+</head>
+
+<body>
+</body>
+
+</html>

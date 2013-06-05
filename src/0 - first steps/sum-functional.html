@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>TEST</title>
+
+	<script type="text/javascript">
+
+		function visit( array, fn )
+		{
+			var key;
+			for ( key in array )
+			{
+				fn( array[ key ] );
+			}
+		}
+
+		var summer = function()
+		{
+			var sum;
+
+			return {
+				"worker": function( a ) { sum += a; },
+				"sum": function() { return sum; }
+			};
+		}
+
+		var mySummer = summer();
+		visit( [ 1, 2, 3 ], mySummer.fn() );
+
+		alert( "The result is " + mySummer.sum() );
+
+	</script>
+
+</head>
+
+<body>
+</body>
+
+</html>
