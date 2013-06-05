@@ -6,29 +6,29 @@
 
 	<script type="text/javascript">
 
-		function visit( array, fn )
+		var visit = function( array, fn )
 		{
 			var key;
 			for ( key in array )
 			{
 				fn( array[ key ] );
 			}
-		}
+		};
 
 		var summer = function()
 		{
-			var sum;
+			var sum = 0;
 
 			return {
 				"worker": function( a ) { sum += a; },
-				"sum": function() { return sum; }
+				"getSum": function() { return sum; }
 			};
-		}
+		};
 
 		var mySummer = summer();
-		visit( [ 1, 2, 3 ], mySummer.fn() );
+		visit( [ 1, 2, 3 ], mySummer.worker );
 
-		alert( "The result is " + mySummer.sum() );
+		alert( "The result is " + mySummer.getSum() );
 
 	</script>
 
