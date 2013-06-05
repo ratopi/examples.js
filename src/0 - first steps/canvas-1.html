@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Canvas 1</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+	<script type="text/javascript">
+		var render = function()
+		{
+			var canvas =document.getElementById( "myCanvas" );
+			var context = canvas.getContext( "2d" );
+
+			context.fillStyle = "#FF0000";
+			context.fillRect( 10, 10, 150, 75 );
+		};
+
+		$( document ).ready( render );
+	</script>
+
+</head>
+
+<body>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+	</canvas>
+</body>
+
+</html>
