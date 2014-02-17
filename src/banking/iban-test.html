@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+<body>
+<script src="iban.js"></script>
+<script>
+// DE15 3757 0064 0709 0046 00
+	var x = iban.calculateIbanChecksum( 'DE', '375700640709004600' );
+	document.write( x );
+
+	document.write( ' xxx ' );
+
+	var y = iban.isIbanCorrect( 'DE15375700640709004600' );
+	document.write( '(' + y + ')' );
+
+	var z = iban.isIbanCorrect( 'DE15375700640709004601' );
+	document.write( '(' + z + ')' );
+</script>
+</body>
+</html>
